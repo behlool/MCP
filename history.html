@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calibration Portal Team Lead</title>
+<!-- Bootstrap Styles-->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- FontAwesome Styles-->
+<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+ 
+<!-- Morris Chart Styles-->
+<link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<!-- Custom Styles-->
+<link href="assets/css/custom-styles.css" rel="stylesheet" />
+
+<!-- Data Table -->
+ <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+<!-- Date Picker -->
+ <link rel="stylesheet" href="assets/css/jquery-ui.css">
+<!-- Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+
+</head>
+
+<body id="history_page">
+<div id="wrapper">
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a> </div>
+    <div class="navbar-collapse pull-left collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Dashboard <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="history.html">History</a></li>
+        <li><a href="admin.html">Admin</a></li> <li> <a href="#">Calibration Workflow </a>
+          
+        </li>
+        <li><a href="qa_wordflow.html">QA Workflow</a></li>
+      </ul>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+     
+      <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-user-circle" aria-hidden="true"></i>
+ <span class="label label-success">3</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 3  notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 1 notifications </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 2 notifications  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 3 notifications  </div>
+            </a> </li>
+        
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>	
+     
+     
+     <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-camera" aria-hidden="true"></i>
+ <span class="label label-warning">2</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 2 Retake Requested notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-camera" aria-hidden="true"></i> 1 Retake Requested notifications </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-camera" aria-hidden="true"></i> 2 Retake Requested notifications  </div>
+            </a> </li>
+        
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>
+      
+     
+      <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-bell fa-fw"></i> <span class="label label-danger">5</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 5 notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-comment fa-fw"></i> New Comment </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-twitter fa-fw"></i> 3 New Followers  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-envelope fa-fw"></i> Message Sent  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-tasks fa-fw"></i> New Task  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-upload fa-fw"></i> Server Rebooted </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a class="text-center" href="#"> <strong>See All Alerts</strong> <i class="fa fa-angle-right"></i> </a> </li>
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>
+      
+      
+      
+      
+        <!-- /.dropdown -->
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="collapse" href="#collapseExample"> <img src="assets/img/g1.jpg" class="user-img" alt="User Image">Team Lead 1 <i class="fa fa-caret-down"></i> <i class="fa fa-share" aria-hidden="true"></i></a>
+      
+        <ul class="dropdown-menu" id="collapseExample">
+            <li>  
+      <div class="swap"> <strong>Your Current Role </strong>   Calibration Tech   </div>
+  <div class="swap_select">  
+        Swap To :    <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
+                          <option value="Choose One">Choose One</option>
+                          <option value="Team Lead">Team Lead</option>
+                          <option value="QA Tech">QA Tech</option>
+                          <option value="Store Liaison">Store Liaison</option>
+                          <option value="Admin">Admin</option>
+                        </select>
+                        </div>
+       
+            </li>
+  
+  
+          <li class="divider"></li>
+  
+  
+  <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
+        </ul>
+        <!-- /.dropdown-user --> 
+      </li>
+      <!-- /.dropdown -->
+    </ul>
+  </nav>
+  <!--/. NAV TOP  -->
+  
+  <div class="container-fluid">
+    <div class="page-heading">
+     <div class="row">
+    <div class="col-md-7"><h1 class="page-header"> Dashboard <small>Calibration Portal Team Lead</small>  </h1>    </div>
+    <div class="col-md-5 col-sm-12 col-xxs-12 ">
+    <div class="form-group  view_average pull-right">
+                        
+                        <select class="form-control ">
+                          <option>View Average by</option>
+                          <option>Last Hour</option>
+                          <option>Last Day</option>
+                          <option>Last 30 Days</option>
+                        </select>
+                      </div>
+    <a href="Historical-dashboard.html" class="btn btn-info pull-right visible-md visible-lg  " role="button"><i class="fa fa-dashboard"></i> Historical Dashboard</a>
+        <a href="Historical-dashboard.html" class="btn btn-info pull-right visible-sm visible-xs " role="button"><i class="fa fa-dashboard"></i></a>
+     
+    <button type="button" class="btn btn-search pull-right  " data-toggle="collapse" data-target="#search"><i class="fa fa-search fa-1x"></i></button> 
+    
+                      
+                       
+                      
+                      </div>
+   
+    </div>
+    </div>
+  </div>
+  <!-- /. NAV SIDE  -->
+  <div id="page-wrapper">
+    <div id="page-inner"><!-- /. ROW  -->
+      
+      <div class="row">
+        <div class="col-md-12">
+         
+         
+         <div id="search" class="collapse search_form1 panel panel-default">
+        
+        
+         <form class="panel-body">
+        
+        <h3>Search</h3> 
+        
+         <div>
+         <label>Member Email</label><input class="form-control input-sm" aria-controls="dataTables-example" type="member email">
+         </div>
+         
+         <div>
+          <label>Calibration Tech</label>
+            <input class="form-control input-sm" aria-controls="dataTables-example" type="calibration tech">
+          
+         </div>
+          
+          <div>
+          <label>QA Tech</label><input class="form-control input-sm" aria-controls="dataTables-example" type="QA Tech">
+         </div>
+         
+         <div>
+          <label>Store Liaison</label><input class="form-control input-sm" aria-controls="dataTables-example" type="Store Liaison">
+          </div>
+          
+          
+         
+         <div class="date_custom">
+         <label>Date</label> <input type="text" value="" id="datepicker" class="form-control input-sm" />
+         
+         </div> 
+         
+         <div class="date_custom">
+         <label>Date Range</label> <!-- <input type="text" name="datefilter" value="" class="form-control input-sm" /> -->
+          <input type="text" id="from" name="from" class="form-control input-sm">
+          </div>
+          
+           <div class="date_custom">
+           <label for="to">to</label>
+<input type="text" id="to" name="to" class="form-control input-sm">
+         
+         </div>
+         
+        <div class="retake_checkbox">
+                                                <label>
+                                                  Retakes Needed  <input value="" type="checkbox">
+                                                </label>
+                                                
+                                            </div>
+                                      <div class="submit_btn">
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
+ Search</button>
+                                      </div>      
+                                           
+         </form>
+         </div>
+         
+        </div>
+      
+        
+      </div>
+      <!--/.row--> 
+      
+      <!-- /. ROW  -->
+      
+      <div class="row">
+        
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="panel panel-default"> 
+            
+            <!-- start tabs -->
+            <div class="panel-body">
+              
+              <div class="tab-content">
+                <div class="tab-pane fade active in" id="need_assignment"> 
+                  <!-- start search filter -->
+                  <div class="row nomrg table_data_filter">
+                    
+
+<div class="col-sm-12 pull-right">
+                   
+                  <div class="export_btn">
+                   <a href="#" class="btn btn-search"><span>Export Summary Report</span> <span> <i class="fa fa-file-excel-o" aria-hidden="true"></i></span></a>
+                   <a href="#" class="btn btn-search"><span>Export Full Report</span> <span> <i class="fa fa-file-excel-o" aria-hidden="true"></i></span></a>
+                   </div>
+                   
+                      
+                  
+                  
+                  
+                      
+                    </div>
+                       
+                   
+                    </div>
+                  <!-- end search filter -->
+                  
+                  <div class="panel-body-pad panel panel-default">
+                    <div class="table-responsive">
+                      <table id="history" class="display table-bordered" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Member ID</th>
+                            <th>Member Email</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Calibration Tech</th>
+                            <th>QA Tech</th>
+                            <th>Store Liaison</th>
+                            <th>Time to Approve</th>
+                            <th>Total Calibration Time</th>
+                            <th>Retake(s) needed?</th>
+                            <th>QA Changes Needed?</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1603</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 13:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 15s</td>
+                            <td>6m 4s</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1601</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 12:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 31s</td>
+                            <td>10m 5s</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1605</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 13:52:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 29s</td>
+                            <td>7m 20s</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                           <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1607</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 05s</td>
+                            <td>5m 1s</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1610</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 09s</td>
+                            <td>15m 5s</td>
+                            <td>Yes</td>
+                            <td>N/A</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1610</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 13s</td>
+                            <td>13m 6s</td>
+                            <td>Yes</td>
+                            <td>N/A</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1611</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 11s</td>
+                            <td>8m 0s</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1612</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 16s</td>
+                            <td>4m 5s</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                             <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1613</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 13s</td>
+                            <td>13m 6s</td>
+                            <td>Yes</td>
+                            <td>N/A</td>
+                             <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1614</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 11s</td>
+                            <td>8m 0s</td>
+                            <td>No</td>
+                            <td>No</td>
+                             <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                          <tr>
+                            <td>1615</td>
+                            <td>test123@SelfieStyler.com</td>
+                            <td>Complete</td>
+                            <td>01/13/17 14:32:54</td>
+                            <td>Cal ibration Tech 1</td>
+                            <td>QA Tech 1</td>
+                            <td>Store Liaison 1</td>
+                            <td>0m 16s</td>
+                            <td>4m 5s</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                             <td><div class="assign_user"><a href="calibration-log.html" data-toggle="tooltip" title="" data-original-title="Calibration Log"><i class="fa fa-eye" aria-hidden="true"></i>
+</a></div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                     
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                
+   
+                
+              </div>
+            </div>
+            <!-- end tabs --> 
+            
+          </div>
+        </div>
+      </div>
+      <!-- /. ROW  -->
+      <footer>
+        <p>© 2017 Calibration Portal.  ALL Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- /. PAGE INNER  --> 
+  </div>
+  <!-- /. PAGE WRAPPER  --> 
+</div>
+<!-- /. WRAPPER  --> 
+
+
+
+
+ 
+<!-- jQuery Js --> 
+<script src="assets/js/jquery-1.10.2.js"></script> 
+<!-- Date Picker -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Bootstrap Js --> 
+<script src="assets/js/bootstrap.min.js"></script> 
+
+<!-- Metis Menu Js --> 
+<script src="assets/js/jquery.metisMenu.js"></script> 
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<!-- start date picker code -->
+  <script>
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+        changeYear: true,
+          numberOfMonths: 2
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        changeYear: true,
+        numberOfMonths: 2
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+	
+	
+	/* single date picker */
+	  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+	
+	
+  } );
+  </script>
+<!-- end dae picker code -->
+
+<!-- Start API method to get Datatable & paging information -->
+  <script>
+
+   
+
+    'use strict';
+	var $ = jQuery;
+	$.getScript("assets/js/datatables.min.js", function(){
+       
+            $('#history').DataTable( {
+                "paging":   true,
+                "ordering": true,
+        		"select": true,
+                "info":     true
+				  
+            } );
+			$('#history thead th').addClass('datatable_th');
+			
+			
+			
+	});
+
+
+  </script>
+<!-- End API method to get Datatable & paging information -->
+
+</body>
+</html>

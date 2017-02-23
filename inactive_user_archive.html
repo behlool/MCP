@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calibration Portal Team Lead</title>
+<!-- Bootstrap Styles-->
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<!-- FontAwesome Styles-->
+<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+ 
+<!-- Morris Chart Styles-->
+<link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<!-- Custom Styles-->
+<link href="assets/css/custom-styles.css" rel="stylesheet" />
+
+<!-- Data Table -->
+ <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+<!-- Date Picker -->
+ <link rel="stylesheet" href="assets/css/jquery-ui.css">
+<!-- Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+
+
+</head>
+
+<body>
+<div id="wrapper">
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png"></a> </div>
+    <div class="navbar-collapse pull-left collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Dashboard <span class="sr-only">(current)</span></a></li>
+        <li><a href="history.html">History</a></li>
+        <li class="active"><a href="admin.html">Admin</a></li>
+        <li> <a href="#">Calibration Workflow </a>
+          
+        </li>
+        <li><a href="qa_wordflow.html">QA Workflow</a></li>
+      </ul>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+     
+      <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-user-circle" aria-hidden="true"></i>
+ <span class="label label-success">3</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 3  notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 1 notifications </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 2 notifications  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-user-circle" aria-hidden="true"></i> 3 notifications  </div>
+            </a> </li>
+        
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>	
+     
+     
+     <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-camera" aria-hidden="true"></i>
+ <span class="label label-warning">2</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 2 Retake Requested notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-camera" aria-hidden="true"></i> 1 Retake Requested notifications </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div>  <i class="fa fa-camera" aria-hidden="true"></i> 2 Retake Requested notifications  </div>
+            </a> </li>
+        
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>
+      
+     
+      <li class="dropdown"> <a class="dropdown-toggle nomrg" data-toggle="dropdown" href="#" aria-expanded="false"> <i class="fa fa-bell fa-fw"></i> <span class="label label-danger">5</span> </a>
+        <ul class="dropdown-menu dropdown-alerts">
+          <li> <a href="#">
+            <div> You have 5 notifications </div>
+            </a></li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-comment fa-fw"></i> New Comment </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-twitter fa-fw"></i> 3 New Followers  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-envelope fa-fw"></i> Message Sent  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-tasks fa-fw"></i> New Task  </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a href="#">
+            <div> <i class="fa fa-upload fa-fw"></i> Server Rebooted </div>
+            </a> </li>
+          <li class="divider"></li>
+          <li> <a class="text-center" href="#"> <strong>See All Alerts</strong> <i class="fa fa-angle-right"></i> </a> </li>
+        </ul>
+        <!-- /.dropdown-alerts --> 
+      </li>
+      
+      
+      
+      
+        <!-- /.dropdown -->
+      <li class="dropdown"> <a class="dropdown-toggle" data-toggle="collapse" href="#collapseExample"> <img src="assets/img/g1.jpg" class="user-img" alt="User Image">Team Lead 1 <i class="fa fa-caret-down"></i> <i class="fa fa-share" aria-hidden="true"></i></a>
+      
+        <ul class="dropdown-menu" id="collapseExample">
+            <li>  
+      <div class="swap"> <strong>Your Current Role </strong>   Calibration Tech   </div>
+  <div class="swap_select">  
+        Swap To :    <select name="dataTables-example_length" aria-controls="dataTables-example" class="form-control input-sm">
+                          <option value="Choose One">Choose One</option>
+                          <option value="Team Lead">Team Lead</option>
+                          <option value="QA Tech">QA Tech</option>
+                          <option value="Store Liaison">Store Liaison</option>
+                          <option value="Admin">Admin</option>
+                        </select>
+                        </div>
+       
+            </li>
+  
+  
+          <li class="divider"></li>
+  
+  
+  <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
+        </ul>
+        <!-- /.dropdown-user --> 
+      </li>
+      <!-- /.dropdown -->
+    </ul>
+  </nav>
+  <!--/. NAV TOP  -->
+  
+  <div class="container-fluid">
+    <div class="page-heading">
+     <div class="row">
+    <div class="col-md-7"><h1 class="page-header"> Inactive <small>Users Archive</small>  </h1>    </div>
+    <div class="col-md-5 col-sm-12 col-xxs-12 ">
+    <div class="form-group  view_average pull-right">
+                        
+                        <select class="form-control ">
+                          <option>View Average by</option>
+                          <option>Last Hour</option>
+                          <option>Last Day</option>
+                          <option>Last 30 Days</option>
+                        </select>
+                      </div>
+    <a href="Historical-dashboard.html" class="btn btn-info pull-right visible-md visible-lg  " role="button"><i class="fa fa-dashboard"></i> Historical Dashboard</a>
+        <a href="Historical-dashboard.html" class="btn btn-info pull-right visible-sm visible-xs " role="button"><i class="fa fa-dashboard"></i></a>
+     
+    <button type="button" class="btn btn-search pull-right  " data-toggle="collapse" data-target="#search"><i class="fa fa-search fa-1x"></i></button> 
+    
+                      
+                       
+                      
+                      </div>
+   
+    </div>
+    </div>
+  </div>
+  <!-- /. NAV SIDE  -->
+  <div id="page-wrapper">
+    <div id="page-inner"><!-- /. ROW  -->
+      
+      <div class="row">
+        <div class="col-md-12">
+         
+         
+         <div id="search" class="collapse search_form1 panel panel-default">
+        
+        
+         <form class="panel-body">
+        
+        <h3>Search</h3> 
+        
+         <div>
+         <label>Member Email</label><input class="form-control input-sm" aria-controls="dataTables-example" type="member email">
+         </div>
+         
+         <div>
+          <label>Calibration Tech</label>
+            <input class="form-control input-sm" aria-controls="dataTables-example" type="calibration tech">
+          
+         </div>
+          
+          <div>
+          <label>QA Tech</label><input class="form-control input-sm" aria-controls="dataTables-example" type="QA Tech">
+         </div>
+         
+         <div>
+          <label>Store Liaison</label><input class="form-control input-sm" aria-controls="dataTables-example" type="Store Liaison">
+          </div>
+          
+          
+         
+         <div class="date_custom">
+         <label>Date</label> <input type="text" value="" id="datepicker" class="form-control input-sm" />
+         
+         </div> 
+         
+         <div class="date_custom">
+         <label>Date Range</label> <!-- <input type="text" name="datefilter" value="" class="form-control input-sm" /> -->
+          <input type="text" id="from" name="from" class="form-control input-sm">
+          </div>
+          
+           <div class="date_custom">
+           <label for="to">to</label>
+<input type="text" id="to" name="to" class="form-control input-sm">
+         
+         </div>
+         
+        <div class="retake_checkbox">
+                                                <label>
+                                                  Retakes Needed  <input value="" type="checkbox">
+                                                </label>
+                                                
+                                            </div>
+                                      <div class="submit_btn">
+                                        <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i>
+ Search</button>
+                                      </div>      
+                                           
+         </form>
+         </div>
+         
+        </div>
+      
+        
+      </div>
+      <!--/.row--> 
+      
+      <!-- /. ROW  -->
+      
+      <div class="row">
+        
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="panel panel-default"> 
+            
+            <!-- start tabs -->
+            <div class="panel-body">
+              
+              <div class="tab-pane fade active in" id="active_users"> 
+                  <!-- start search filter -->
+                  <div class="row nomrg table_data_filter">
+                    
+
+<div class="col-sm-12 pull-right">
+                   
+                  <div class="export_btn">
+                   <a href="#" class="btn btn-search"><span>Export Summary Report</span> <span> <i class="fa fa-file-excel-o" aria-hidden="true"></i></span></a> </div>
+                   
+                      
+                  
+                  
+                  
+                      
+                    </div>
+                       
+                   
+                    </div>
+                  <!-- end search filter -->
+                  
+                  <div class="panel-body-pad panel panel-default">
+                    <div class="table-responsive">
+                      <table id="inactive_user_archive" class="display table-bordered" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th data-defaultsign="email" class="nosort" data-sortcolumn="0" data-sortkey="0-0">Email</th>
+                            <th data-defaultsign="role" class="nosort" data-sortcolumn="1" data-sortkey="1-0">Role</th>
+                            <th data-defaultsign="user" class="nosort" data-sortcolumn="2" data-sortkey="2-0">User Since Date</th>
+                            <th data-dateformat="lastlogin" class="nosort" data-sortcolumn="3" data-sortkey="3-0">Last Login Date</th>
+                            <th data-defaultsign="action" class="nosort" data-sortcolumn="4" data-sortkey="4-0">Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-value="1">Behlool@selfiestyler.com</td>
+                            <td data-value="Admin">Admin</td>
+                            <td data-value="1/30/17">1/30/17</td>
+                            <td data-value="0000/02/25/00/00/00">2/25/17</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                          <tr>
+                            <td data-value="2">Placeholder</td>
+                            <td data-value="Calibration Tech">Calibration Tech</td>
+                            <td data-value="#/##/##">#/##/##</td>
+                            <td data-value="Invalid date">#/##/##</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                          <tr>
+                            <td data-value="3">Placeholder</td>
+                            <td data-value="QA Tech">QA Tech</td>
+                            <td data-value="#/##/##">#/##/##</td>
+                            <td data-value="Invalid date">#/##/##</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                          <tr>
+                            <td data-value="4">Placeholder</td>
+                            <td data-value="Calibration Tech">Calibration Tech</td>
+                            <td data-value="#/##/##">#/##/##</td>
+                            <td data-value="Invalid date">#/##/##</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                          <tr>
+                            <td data-value="5">Placeholder</td>
+                            <td data-value="Store Liaison">Store Liaison</td>
+                            <td data-value="#/##/##">#/##/##</td>
+                            <td data-value="Invalid date">#/##/##</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                          <tr>
+                            <td data-value="6">Placeholder</td>
+                            <td data-value="QA Tech">QA Tech</td>
+                            <td data-value="#/##/##">#/##/##</td>
+                            <td data-value="Invalid date">#/##/##</td>
+                            <td data-value="Reactivate"><span><a href="#">Reactivate</a></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                 
+                </div>
+            </div>
+            <!-- end tabs --> 
+            
+          </div>
+        </div>
+      </div>
+      <!-- /. ROW  -->
+      <footer>
+        <p>© 2017 Calibration Portal.  ALL Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- /. PAGE INNER  --> 
+  </div>
+  <!-- /. PAGE WRAPPER  --> 
+</div>
+<!-- /. WRAPPER  --> 
+
+
+
+
+ 
+<!-- jQuery Js --> 
+<script src="assets/js/jquery-1.10.2.js"></script> 
+<!-- Date Picker -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Bootstrap Js --> 
+<script src="assets/js/bootstrap.min.js"></script> 
+
+<!-- Metis Menu Js --> 
+<script src="assets/js/jquery.metisMenu.js"></script> 
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<!-- start date picker code -->
+  <script>
+  $( function() {
+    var dateFormat = "mm/dd/yy",
+      from = $( "#from" )
+        .datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+        changeYear: true,
+          numberOfMonths: 2
+        })
+        .on( "change", function() {
+          to.datepicker( "option", "minDate", getDate( this ) );
+        }),
+      to = $( "#to" ).datepicker({
+        defaultDate: "+1w",
+        changeMonth: true,
+        changeYear: true,
+        numberOfMonths: 2
+      })
+      .on( "change", function() {
+        from.datepicker( "option", "maxDate", getDate( this ) );
+      });
+ 
+    function getDate( element ) {
+      var date;
+      try {
+        date = $.datepicker.parseDate( dateFormat, element.value );
+      } catch( error ) {
+        date = null;
+      }
+ 
+      return date;
+    }
+	
+	
+	/* single date picker */
+	  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+	
+	
+  } );
+  </script>
+<!-- end dae picker code -->
+<!-- Start API method to get Datatable & paging information -->
+  <script>
+
+   
+
+    'use strict';
+	var $ = jQuery;
+	$.getScript("assets/js/datatables.min.js", function(){
+       
+            $('#inactive_user_archive').DataTable( {
+                "paging":   true,
+                "ordering": true,
+        		"select": true,
+                "info":     true
+				  
+            } );
+			$('#inactive_user_archive thead th').addClass('datatable_th');
+			
+			
+			
+	});
+
+
+  </script>
+<!-- End API method to get Datatable & paging information -->
+</body>
+</html>
